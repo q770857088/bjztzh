@@ -633,7 +633,7 @@
                 <div class="col-md-6">
                     <blockquote class="inline">
                         <p class="margin-clear">北京智通智慧科技有限公司致力于创新和发展，立志在制药、食品安全检测、生物研究用试剂等高科技领域为客户提供优质服务，引导客户迈向成功。</p>
-                        <footer><cite title="Source Title">杭州北望 </cite></footer>
+                        <footer><cite title="Source Title">北京智通智慧科技有限公司 </cite></footer>
                     </blockquote>
                 </div>
             </div>

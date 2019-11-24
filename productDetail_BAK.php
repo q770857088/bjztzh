@@ -160,7 +160,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label>在线客服</label><br/>
-                                            <a href="tencent://message/?uin=2679943834&Site=杭州北望&Menu=yes"><i
+                                            <a href="tencent://message/?uin=2679943834&Site=北京智通智慧科技有限公司&Menu=yes"><i
                                                     class="fa fa-qq"></i> </a>
                                         </div>
                                     </div>

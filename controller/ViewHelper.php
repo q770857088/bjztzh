@@ -143,7 +143,7 @@ class ViewHelper
 
                         <!-- logo -->
                         <div class="logo">
-                            <a href="index.php"><img src="style/images/logo_red.png" alt="杭州北望"></a>
+                            <a href="index.php"><img src="style/images/logo_red.png" alt="北京智通智慧科技有限公司"></a>
                         </div>
 
                         <!-- name-and-slogan -->

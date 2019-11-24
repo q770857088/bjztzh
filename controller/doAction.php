@@ -61,7 +61,7 @@ if ($operation === 'register') {
         $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . "?act=active&token={$token}";
         $urlencode = urlencode($url);
         $str = <<<EOF
-		亲爱的{$username}您好~！感谢您注册我们北望科技有限公司网站<br/>
+		亲爱的{$username}您好~！感谢您注册我们北京智通智慧科技有限公司网站<br/>
 		请点击此链接激活帐号即可登陆！<br/>
 		<a href="{$url}">{$urlencode}</a>
 		<br/>
@@ -136,12 +136,12 @@ EOF;
     //将邮件发给谁
     $message->setTo(array($email => $email));
     //设置邮件主题
-    $message->setSubject('北望生物科技有限公司网站找回密码邮件');
+    $message->setSubject('北京智通智慧科技有限公司网站找回密码邮件');
     $url = "http://" . $_SERVER['HTTP_HOST'] . "/CRO_WEB_HZ/admin/" . "register.html?show=resetPassword-box&email={$email}";
     $urlencode = urlencode($url);
     $resetPasswordUrl = "http://" . $_SERVER['HTTP_HOST'] . "/CRO_WEB_HZ/admin/" . "register.html?email={$email}&show=resetPassword-box";
     $str = <<<EOF
-		亲爱的{$username}您好~！感谢您使用我们北望科技有限公司网站<br/>
+		亲爱的{$username}您好~！感谢您使用我们北京智通智慧科技有限公司网站<br/>
 		请点击此链接重置密码！<br/>
 		<a href="{$resetPasswordUrl}">{$urlencode}</a>
 		<br/>

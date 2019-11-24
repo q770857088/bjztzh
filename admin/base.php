@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>杭州北望信息管理系统 - 网站基本信息</title>
-    <meta name="keywords" content=" 杭州北望信息管理系统,后台管理系统,生物医药,杭州,网站基本信息"/>
-    <meta name="description" content="杭州北望信息管理系统之网站基本信息管理"/>
+    <title>北京智通智慧科技有限公司信息管理系统 - 网站基本信息</title>
+    <meta name="keywords" content=" 北京智通智慧科技有限公司信息管理系统,后台管理系统,生物医药,杭州,网站基本信息"/>
+    <meta name="description" content="北京智通智慧科技有限公司信息管理系统之网站基本信息管理"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- basic styles -->

@@ -392,8 +392,8 @@ CREATE TABLE `milestone` (
 INSERT INTO `milestone` (`id`, `image`, `content`, `time`, `publisher`) VALUES
 (1, 'style/images/blog-1.jpg', '成立北京智通智慧科技有限公司.以研发为主', '2007年12月21', 'admin'),
 (2, 'style/images/blog-1.jpg', '2008年之后公司进入发展期，开始以研发为主，生物制药、销售为主的发展模式。', '2008年4月10日', 'admin'),
-(3, 'style/images/blog-1.jpg', '在广东珠海成立了珠海北望生物科技有限公司的子公司。', '2015年7月21日', 'admin'),
-(4, 'style/images/blog-1.jpg', '在广东珠海成立了珠海北望生物科技有限公司的子公司。', '2015年7月22日', 'admin');
+(3, 'style/images/blog-1.jpg', '在广东珠海成立了珠海北京智通智慧科技有限公司的子公司。', '2015年7月21日', 'admin'),
+(4, 'style/images/blog-1.jpg', '在广东珠海成立了珠海北京智通智慧科技有限公司的子公司。', '2015年7月22日', 'admin');
 
 -- --------------------------------------------------------
 

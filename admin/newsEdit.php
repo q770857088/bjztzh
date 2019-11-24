@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>北京智通智慧科技有限公司信息管理系统|资讯修改删除</title>
-    <meta name="keywords" content="杭州北望\生物技术有限公司\信息\管理系统" />
+    <meta name="keywords" content="北京智通智慧科技有限公司\生物技术有限公司\信息\管理系统" />
     <meta name="description" content="北京智通智慧科技有限公司信息管理系统" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- basic styles -->
@@ -55,7 +55,7 @@
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    杭州北望信息管理系统
+                    北京智通智慧科技有限公司信息管理系统
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->

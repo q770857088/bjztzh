@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>杭州北望信息管理系统 -添加新产品</title>
+    <title>北京智通智慧科技有限公司信息管理系统 -添加新产品</title>
     <meta name="keywords" content="北望信息、生物医药、杭州"/>
-    <meta name="description" content="杭州北望信息管理系统"/>
+    <meta name="description" content="北京智通智慧科技有限公司信息管理系统"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- basic styles -->
@@ -74,7 +74,7 @@
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    杭州北望信息管理系统
+                    北京智通智慧科技有限公司信息管理系统
                 </small>
             </a><!-- /.brand -->
         </div><!-- /.navbar-header -->

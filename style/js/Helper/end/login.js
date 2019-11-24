@@ -17,7 +17,7 @@
                     saveToLocalStorage("Adminid", new Base64().encode(datas.identifier));
                     saveToLocalStorage("Adminusername", new Base64().encode(datas.username));
                     saveToLocalStorage("AdminID", new Base64().encode(datas.id));
-                    window.location.href = "main.php";
+                    window.location.href = "base.php";
                 } else {
                     emptyTheLocalStorage();
                     swal(data.message);
@@ -51,7 +51,7 @@
                     saveToLocalStorage("Adminid", new Base64().encode(datas.identifier));
                     saveToLocalStorage("Adminusername", new Base64().encode(datas.username));
                     saveToLocalStorage("AdminID", new Base64().encode(datas.id));
-                    window.location.href = "main.php";
+                    window.location.href = "base.php";
                 } else {
                     swal(data.message);
                 }

@@ -65,12 +65,12 @@ else if ($action == "seekPassword") {
     //将邮件发给谁
     $message->setTo(array($_REQUEST["seekEmail"] => $_REQUEST["seekEmail"]));
     //设置邮件主题
-    $message->setSubject('北望生物科技有限公司网站找回密码邮件');
+    $message->setSubject('北京智通智慧科技有限公司网站找回密码邮件');
     $url = "http://" . $_SERVER['HTTP_HOST'] . "/CRO_WEB_HZ/" . "register.html?show=resetPassword-box&email={$_REQUEST["seekEmail"]}";
     $urlencode = urlencode($url);
     $resetPasswordUrl = "http://" . $_SERVER['HTTP_HOST'] . "/CRO_WEB_HZ/" . "register.html?email={$_REQUEST["seekEmail"]}&show=resetPassword-box";
     $str = <<<EOF
-		亲爱的{$username}您好~！感谢您使用我们北望科技有限公司网站<br/>
+		亲爱的{$username}您好~！感谢您使用我们北京智通智慧科技有限公司网站<br/>
 		请点击此链接重置密码！<br/>
 		<a href="{$resetPasswordUrl}">{$urlencode}</a>
 		<br/>
@@ -116,7 +116,7 @@ else if ($action == "register") {
         //将邮件发给谁
         $message->setTo(array($email => $email));
         //设置邮件主题
-        $message->setSubject('北望生物科技有限公司激活邮件');
+        $message->setSubject('北京智通智慧科技有限公司激活邮件');
         $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . "?action=active&token={$token}";
         $urlencode = urlencode($url);
 
@@ -219,7 +219,7 @@ else if ($action == "active") {
         //将邮件发给谁
         $message->setTo(array($row[0]["email"] => $row[0]["email"]));
         //设置邮件主题
-        $message->setSubject('北望生物科技有限公司激活邮件');
+        $message->setSubject('北京智通智慧科技有限公司激活邮件');
         $url = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . "?action=active&token={$row[0]["token"]}";
         $urlencode = urlencode($url);
         $str = <<<EOF
