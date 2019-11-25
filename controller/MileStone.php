@@ -12,8 +12,8 @@ require_once '../model/PdoMySQL.class.php';
 error_reporting(0);
 require_once '../model/config.php';
 require_once 'Response.php';
-require_once '../Utils/fileHandler/upload.class.php';
-require_once '../Utils/fileHandler/upload.func.php';
+require_once '../utils/fileHandler/upload.class.php';
+require_once '../utils/fileHandler/upload.func.php';
 
 class MileStone
 {

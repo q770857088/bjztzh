@@ -10,7 +10,7 @@ header('content-type:text.html;charset=utf-8');
 require_once '../model/PdoMySQL.class.php';
 error_reporting(0);
 require_once '../model/config.php';
-include_once '../Utils/fileHandler/upload.func.php';
+include_once '../utils/fileHandler/upload.func.php';
 
 class PublishProudct
 {

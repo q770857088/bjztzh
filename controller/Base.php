@@ -11,8 +11,8 @@ require_once '../model/PdoMySQL.class.php';
 error_reporting(0);
 require_once '../model/config.php';
 require_once 'Response.php';
-require_once '../Utils/fileHandler/upload.class.php';
-require_once '../Utils/fileHandler/upload.func.php';
+require_once '../utils/fileHandler/upload.class.php';
+require_once '../utils/fileHandler/upload.func.php';
 
 class BaseService
 {
@@ -43,7 +43,7 @@ class BaseService
         // TODO: Implement __clone() method.
     }
 
-    public function getInstance()
+    public static function getInstance()
     {
         if (self::$_instance === null) {
             self::$_instance = new self();
@@ -53,21 +53,21 @@ class BaseService
 
     public function operateService()
     {
-        self . $this->type = $_REQUEST["type"];
-        self . $this->baseId = $_REQUEST["baseId"];
+        $this->type = $_REQUEST["type"];
+        $this->baseId = $_REQUEST["baseId"];
 
-        self . $this->webtitle = $_REQUEST["webtitle"];
-        self . $this->companyIntr = $_REQUEST["companyIntr"];
-        self . $this->address = $_REQUEST['address'];
+        $this->webtitle = $_REQUEST["webtitle"];
+        $this->companyIntr = $_REQUEST["companyIntr"];
+        $this->address = $_REQUEST['address'];
 
-        self . $this->companyIntr = $_REQUEST['companyIntr'];
-        self . $this->adminiatratorTel = $_REQUEST['AdminiatratorTel'];
-        self . $this->enzymeTel = $_REQUEST['enzymeTel'];
-        self . $this->plateTel = $_REQUEST['plateTel'];
+        $this->companyIntr = $_REQUEST['companyIntr'];
+        $this->adminiatratorTel = $_REQUEST['AdminiatratorTel'];
+        $this->enzymeTel = $_REQUEST['enzymeTel'];
+        $this->plateTel = $_REQUEST['plateTel'];
 
-        self . $this->fax = $_REQUEST['fax'];
-        self . $this->adminiatratorEmail = $_REQUEST['adminiatratorEmail'];
-        self . $this->marketDepartmentEmail = $_REQUEST['MarketDepartmentEmail'];
+        $this->fax = $_REQUEST['fax'];
+        $this->adminiatratorEmail = $_REQUEST['adminiatratorEmail'];
+        $this->marketDepartmentEmail = $_REQUEST['MarketDepartmentEmail'];
 
         $mysqlPdo = new PdoMySQL();
         if ($this->type === "select") {
