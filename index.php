@@ -708,102 +708,102 @@
     });
 
     var rankData;
-    $.ajax({
-        dataType: "json",
-        type: "get",
-        url: "controller/productList.php?type=main",
-        success: function (data) {
-            if (data.code == 200) {
-                var datas = data.data;
-                if (datas.length <= 0) {
-                    return;
-                }
-                if (data.code == 200) {
-                    var $latestTarget = $("#LatestPanel");
-                    $latestTarget.empty();
-                    var datas = data.data.tuijian;
-                    for (var i = 0; i < datas.length; i++) {
-                        var icon = "";
-                        if (i == 0) {
-                            icon = "fa fa-leaf";
-                        } else if (i == 1) {
-                            icon = "fa fa-laptop";
-                        } else if (i == 2) {
-                            icon = "fa fa-sitemap";
-                        }
-                        var tr = $('<div class="col-sm-4">' +
-                            '<div class="box-style-1 white-bg object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="0" style="opacity:1;">' +
-                            '<i class="' + icon + '"></i>' +
-                            '<h2>' + datas[i].productName + '</h2>' +
-                            '<p>' + datas[i].unit + '</p>' +
-                            '<a href="productDetail.php?id=' + datas[i].id + '" class="btn-default btn">单 价：' + datas[i].discountPrice + ' 元</a>' +
-                            '</div>' +
-                            '</div>').appendTo($latestTarget);
-                    }
-
-                    var ptDatas = data.data.putong;
-                    var $ptTarget = $("#ptPanel");
-
-                    var $ptDetailTarget = $("#ptDetailPanel");
-
-                    $ptTarget.empty();
-                    for (var i = 1; i <= ptDatas.length; i++) {
-                        rankData = ptDatas;
-                        if (i == 1) {
-                            $('<div class="panel panel-default" onclick="switchDetail(1)">' +
-                                '<div class="panel-heading">' +
-                                '<h4 class="panel-title">' +
-                                '<a data-toggle="collapse" data-parent="#ptPanel" href="#collapse' + i + '" class="" aria-expanded="true">' +
-                                '<i class="fa fa-medkit"></i>' + ptDatas[i - 1].productName + '<span class="default-bg badge">普通商品 </span>' +
-                                '</a>' +
-                                '</h4>' +
-                                '</div>' +
-                                '<div id="collapse' + i + '" class="panel-collapse collapse in" aria-expanded="true">' +
-                                '<div class="panel-body">' +
-                                '<p>' + ptDatas[i - 1].unit + '</p>' +
-                                '<p>性 状：' + ptDatas[i - 1].productFeature + '</p>' +
-                                '</div>' +
-                                '</div>' +
-                                '</div>').appendTo($ptTarget);
-                            $('<h2 class="title">' + ptDatas[i - 1].productName + '</h2>' +
-                                '<div class="row">' +
-                                '<div class="col-md-6">' +
-                                '<img src="style/images/601qmsdg.jpg" alt="">' +
-                                '</div>' +
-                                '<div class="col-md-6">' +
-                                '<p>简介:' + ptDatas[i - 1].productDescription + '</p>' +
-                                '</div>' +
-                                '</div>' +
-                                '<p>商品价格：￥' + ptDatas[i - 1].discountPrice + '元</p>' +
-                                '<p>商品单位：' + ptDatas[i - 1].unit + '</p>' +
-                                '<a href="productDetail.php?id='+ptDatas[i - 1].id+'&type=普通商品" class="btn btn-white">查看更多</a>' +
-                                '<div class="space hidden-md hidden-lg"></div>').appendTo($ptDetailTarget);
-
-                        } else {
-                            $('<div class="panel panel-default" onclick="switchDetail('+i+')">' +
-                                '<div class="panel-heading">' +
-                                '<h4 class="panel-title">' +
-                                '<a data-toggle="collapse" data-parent="#ptPanel" href="#collapse' + i + '" class="collapsed">' +
-                                '<i class="fa fa-medkit"></i>' + ptDatas[i - 1].productName + '<span class="default-bg badge">普通商品 </span>' +
-                                '</a>' +
-                                '</h4>' +
-                                '</div>' +
-                                '<div id="collapse' + i + '" class="panel-collapse collapse">' +
-                                '<div class="panel-body">' +
-                                '<p>' + ptDatas[i - 1].unit + '</p>' +
-                                '<p>性 状：' + ptDatas[i - 1].productFeature + '</p>' +
-                                '</div>' +
-                                '</div>' +
-                                '</div>').appendTo($ptTarget);
-                        }
-                    }
-                }
-            }
-        },
-        error: function (code, message, data) {
-            swal("发生错误：" + message);
-        }
-    });
+    // $.ajax({
+    //     dataType: "json",
+    //     type: "get",
+    //     url: "controller/productList.php?type=main",
+    //     success: function (data) {
+    //         if (data.code == 200) {
+    //             var datas = data.data;
+    //             if (datas.length <= 0) {
+    //                 return;
+    //             }
+    //             if (data.code == 200) {
+    //                 var $latestTarget = $("#LatestPanel");
+    //                 $latestTarget.empty();
+    //                 var datas = data.data.tuijian;
+    //                 for (var i = 0; i < datas.length; i++) {
+    //                     var icon = "";
+    //                     if (i == 0) {
+    //                         icon = "fa fa-leaf";
+    //                     } else if (i == 1) {
+    //                         icon = "fa fa-laptop";
+    //                     } else if (i == 2) {
+    //                         icon = "fa fa-sitemap";
+    //                     }
+    //                     var tr = $('<div class="col-sm-4">' +
+    //                         '<div class="box-style-1 white-bg object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="0" style="opacity:1;">' +
+    //                         '<i class="' + icon + '"></i>' +
+    //                         '<h2>' + datas[i].productName + '</h2>' +
+    //                         '<p>' + datas[i].unit + '</p>' +
+    //                         '<a href="productDetail.php?id=' + datas[i].id + '" class="btn-default btn">单 价：' + datas[i].discountPrice + ' 元</a>' +
+    //                         '</div>' +
+    //                         '</div>').appendTo($latestTarget);
+    //                 }
+    //
+    //                 var ptDatas = data.data.putong;
+    //                 var $ptTarget = $("#ptPanel");
+    //
+    //                 var $ptDetailTarget = $("#ptDetailPanel");
+    //
+    //                 $ptTarget.empty();
+    //                 for (var i = 1; i <= ptDatas.length; i++) {
+    //                     rankData = ptDatas;
+    //                     if (i == 1) {
+    //                         $('<div class="panel panel-default" onclick="switchDetail(1)">' +
+    //                             '<div class="panel-heading">' +
+    //                             '<h4 class="panel-title">' +
+    //                             '<a data-toggle="collapse" data-parent="#ptPanel" href="#collapse' + i + '" class="" aria-expanded="true">' +
+    //                             '<i class="fa fa-medkit"></i>' + ptDatas[i - 1].productName + '<span class="default-bg badge">普通商品 </span>' +
+    //                             '</a>' +
+    //                             '</h4>' +
+    //                             '</div>' +
+    //                             '<div id="collapse' + i + '" class="panel-collapse collapse in" aria-expanded="true">' +
+    //                             '<div class="panel-body">' +
+    //                             '<p>' + ptDatas[i - 1].unit + '</p>' +
+    //                             '<p>性 状：' + ptDatas[i - 1].productFeature + '</p>' +
+    //                             '</div>' +
+    //                             '</div>' +
+    //                             '</div>').appendTo($ptTarget);
+    //                         $('<h2 class="title">' + ptDatas[i - 1].productName + '</h2>' +
+    //                             '<div class="row">' +
+    //                             '<div class="col-md-6">' +
+    //                             '<img src="style/images/601qmsdg.jpg" alt="">' +
+    //                             '</div>' +
+    //                             '<div class="col-md-6">' +
+    //                             '<p>简介:' + ptDatas[i - 1].productDescription + '</p>' +
+    //                             '</div>' +
+    //                             '</div>' +
+    //                             '<p>商品价格：￥' + ptDatas[i - 1].discountPrice + '元</p>' +
+    //                             '<p>商品单位：' + ptDatas[i - 1].unit + '</p>' +
+    //                             '<a href="productDetail.php?id='+ptDatas[i - 1].id+'&type=普通商品" class="btn btn-white">查看更多</a>' +
+    //                             '<div class="space hidden-md hidden-lg"></div>').appendTo($ptDetailTarget);
+    //
+    //                     } else {
+    //                         $('<div class="panel panel-default" onclick="switchDetail('+i+')">' +
+    //                             '<div class="panel-heading">' +
+    //                             '<h4 class="panel-title">' +
+    //                             '<a data-toggle="collapse" data-parent="#ptPanel" href="#collapse' + i + '" class="collapsed">' +
+    //                             '<i class="fa fa-medkit"></i>' + ptDatas[i - 1].productName + '<span class="default-bg badge">普通商品 </span>' +
+    //                             '</a>' +
+    //                             '</h4>' +
+    //                             '</div>' +
+    //                             '<div id="collapse' + i + '" class="panel-collapse collapse">' +
+    //                             '<div class="panel-body">' +
+    //                             '<p>' + ptDatas[i - 1].unit + '</p>' +
+    //                             '<p>性 状：' + ptDatas[i - 1].productFeature + '</p>' +
+    //                             '</div>' +
+    //                             '</div>' +
+    //                             '</div>').appendTo($ptTarget);
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     },
+    //     error: function (code, message, data) {
+    //         swal("发生错误：" + message);
+    //     }
+    // });
 
     function switchDetail($targetId) {
         if($targetId == "" || $targetId == undefined){
